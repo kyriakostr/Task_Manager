@@ -1,0 +1,27 @@
+header{
+    color: midnightblue;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 70%;
+    position: relative;
+    text-align: center;
+    
+}
+nav ul{
+    max-width: 100%;
+  
+    
+    text-align: center;
+    
+}
+nav a{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    width: 10%;
+    margin-left: 5%;
+    margin-right: 5%;
+    text-decoration: none;
+}
+li{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    display: inline;
+    list-style: none;
+}

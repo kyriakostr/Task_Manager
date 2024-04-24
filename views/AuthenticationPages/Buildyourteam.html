@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/dashboard.css">
+</head>
+<body>
+    <header>
+        <h2>
+            Build your team
+        </h2>
+    </header>
+    <div >
+       <label for="team-name">Team name</label>
+       <input type="text" class="team-name" id="team-name">
+       <br>
+       <label for="admin-wrapper">Admins</label>
+       <div class="admin-wrapper" id="admin-wrapper">
+            <ul class="admin-tags">
+                <input type="text" class="admin" id="admin" oninput="getadmins()">
+            
+            </ul>
+        <div class="adminsearchbar">
+
+        </div>
+       </div>
+        <br><br><br>
+        <label for="team-wrapper">Team</label>
+        <div class="team-wrapper" id="team-wrapper">
+            <ul class="team-tags">
+                <input type="text" class="team" id="team" oninput="getteams()">
+
+            </ul>
+            
+            <div class="teamsearchbar">
+
+            </div>
+        </div>
+        
+    </div>
+    <br>
+    <button>Submit</button>
+    <script src="/checkuser.js"></script>
+    <script src="/buildteam.js"></script>
+    
+    
+</body>
+</html>

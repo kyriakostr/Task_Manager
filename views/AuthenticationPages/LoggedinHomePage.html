@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/index.css">
+</head>
+<body>
+    <header>
+        <h1>Task Manager Home Page</h1>
+    </header>
+    <nav>
+        <ul>
+           
+            <a href="/about">About</a>
+            <a href="/Dashboard">Dashboard</a>
+            <li></li>
+            <a href="/logout">logout</a>
+        </ul>
+        
+    </nav>
+    <script src="/checkuser.js"></script>
+    <script>
+        const username = document.querySelector('li');
+        const loggedin = async () =>{
+            let user = await checkuser();
+            username.textContent= user.email;
+        }
+
+        loggedin();
+    </script>
+   
+</body>
+</html>

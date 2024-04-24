@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/calendar.css">
+    
+</head>
+<body>
+    <header>
+        <h1>Dashboard</h1>
+    </header>
+    
+    <div class="container">
+        <div class="left">
+            <div class="calendar">
+                <div class="current-month-banner">
+                    <span class="current-month"></span> 
+                    <span class="current-year"></span>
+                    <div class="arrows">
+                     <span class="prev">&#10094</span>
+                     <span class="next">&#10095</span>
+                     </div>
+                 </div>
+                 <ul class="days">
+                     
+                 </ul>
+                 <ul class="dates">
+         
+                 </ul>
+                
+            </div>
+            <ul class="to-do-events">
+
+            </ul>
+            
+        </div>
+        <div class="user"></div>
+        
+        <div class="right">
+            <h3>Events</h3>
+            <select name="" id="select-month" onchange="monthonchange()"></select>
+            <select name="" id="select-year" onchange="yearonchange()"></select>
+            <button class="apply-date">Apply date</button>
+            <form class="add-events" onsubmit="return false">
+               
+                    <h4>Add Events</h4>
+                <li class="current-date"></li>
+                <div class="add-event-body">
+                    <input type="text" placeholder="Enter title event" name="title">
+                    <!-- <input type="text" placeholder="Enter for who is about this event" name="forwho"> -->
+                    <div class="admin-wrapper" id="admin-wrapper">
+                        <ul class="admin-tags">
+                            <input type="text" class="admin" id="admin" oninput="getadmins()">
+                        
+                        </ul>
+                    <div class="adminsearchbar">
+            
+                    </div>
+                    <input type="text" placeholder="Enter comments about this event" name="task">
+                    <input type="time" name="time" id="">
+                    <button class="submit">Submit</button>
+                </div>
+                
+            </form>
+            
+                
+            </div>
+        </div>
+        
+    </div>
+    <script src="/checkuser.js"></script>
+    <script src="/makeeventcalendar.js"></script>
+    <script src="/calendar.js"></script>
+    
+</body>
+</html>

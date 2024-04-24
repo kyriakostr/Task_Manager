@@ -1,0 +1,8 @@
+.users a{
+    display: inline;
+    text-decoration: none;
+}
+.chats a{
+    display: block;
+    text-decoration: none;
+}

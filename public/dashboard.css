@@ -1,0 +1,31 @@
+
+ul{
+    display: flex;
+    padding: 3px;
+    
+}
+ul li{
+    list-style: none;
+    background-color: burlywood;
+    margin: 3px;
+    padding: 2px;
+}
+.admin-wrapper,.team-wrapper{
+    border: 1px solid;
+    border-radius: 10px;
+    background-color: azure;
+    align-items: center;
+}
+.admin,.team{
+    
+    border: none;
+    outline: none;
+}
+i{
+    border: 2px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.adminsearchbar div,.teamsearchbar div{
+    cursor: pointer;
+}

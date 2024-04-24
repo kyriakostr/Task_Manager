@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/Authentication.css">
+</head>
+<body>
+    <header>
+        <h2>Login</h2>
+    </header>
+   <form action="" onsubmit="return false">
+    <input type="text" name="email" placeholder="Enter email">
+    <div class="email error"></div>
+    <input type="password" name="password"  placeholder="Enter password">
+    <div class="password error"></div>
+    <button>Submit</button>
+    </form>
+    <!-- <script src="/checkuser.js"></script> -->
+    <script>
+        const form = document.querySelector('form');
+        const emailerror = document.querySelector('.email.error');
+        const passworderror = document.querySelector('.password.error');
+        
+        form.addEventListener('submit',async (e)=>{
+            e.preventDefault();
+            emailerror.textContent='';
+            passworderror.textContent='';
+            const email = form.email.value;
+            const password = form.password.value;
+            try{
+                const response = await fetch('/login',{
+                    method:'POST',
+                    headers:{
+                        'Content-Type':'application/json'
+                    },
+                    body: JSON.stringify(
+                        {
+                        email,
+                        password
+                    }
+                    )
+                });
+                const user = await response.json();
+                console.log(user);
+                if(user.errors){
+                    emailerror.textContent = user.errors.email;
+                    passworderror.textContent = user.errors.password;
+                }else{
+                    location.assign(`/HomePage/${user._id}`);
+                }
+            }catch(err){
+                console.log(err);
+
+            }
+            
+        });
+    </script>
+</body>
+</html>
